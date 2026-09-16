@@ -205,8 +205,8 @@ function vitePluginStorageProxy(): Plugin {
 
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector(), vitePluginStorageProxy()];
 
-export default defineConfig({
-  base: "/bauzon-bookmarks/",
+export default defineConfig(({ command }) => ({
+  base: command === "build" ? "/bauzon-bookmarks/" : "/",
   plugins,
   resolve: {
     alias: {
@@ -239,4 +239,4 @@ export default defineConfig({
       deny: ["**/.*"],
     },
   },
-});
+}));
