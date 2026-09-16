@@ -11,9 +11,7 @@ import {
   Library,
   Menu,
   Search,
-  Sparkles,
-  Star,
-  X,
+      X,
 } from "lucide-react";
 
 type Story = {
@@ -36,7 +34,7 @@ const stories: Story[] = [
     category: "Fantasy",
     label: "Editor's pick",
     summary: "A quiet student discovers that every book in the old library contains a different version of tomorrow.",
-    image: "/manus-storage/starlit-hero_e272b597.jpg",
+    image: "/manus-storage/chapter-hero_445ab79b.jpg",
     color: "#ece5ff",
     time: "8 min read",
     rating: "4.9",
@@ -83,7 +81,7 @@ const stories: Story[] = [
     title: "A Bookmark for Tomorrow",
     category: "Inspiration",
     label: "Feel-good",
-    summary: "A tiny paper star reminds a tired student that progress still counts, even on the slow days.",
+    summary: "A tiny paper bookmark reminds a tired student that progress still counts, even on the slow days.",
     image: "/manus-storage/starlit-feature_fa97bb16.jpg",
     color: "#fff1d9",
     time: "4 min read",
@@ -158,7 +156,7 @@ export default function Home() {
         <section className="hero-section">
           <div className="hero-content">
             <div className="eyebrow"><span className="eyebrow-dot" /> A personal reading corner by Bauzon Joshua</div>
-            <h1>Stories that feel<br /><span>like starlight.</span></h1>
+            <h1>Stories worth<br /><span>keeping.</span></h1>
             <p className="hero-copy">A carefully curated bookmark for stories that make ordinary school days feel a little more magical.</p>
             <div className="hero-actions">
               <button className="primary-button" onClick={scrollToStories}>Explore the shelf <ArrowUpRight size={17} /></button>
@@ -170,8 +168,8 @@ export default function Home() {
               <div><strong>∞</strong><span>places to imagine</span></div>
             </div>
           </div>
-          <div className="hero-note note-one"><Sparkles size={14} /> good stories, good days</div>
-          <div className="hero-note note-two">chapter 01 <span>✦</span></div>
+          <div className="hero-note note-one"><BookOpen size={14} /> good stories, good days</div>
+          <div className="hero-note note-two">chapter 01</div>
           <div className="hero-scroll">Scroll to discover <span /></div>
         </section>
 
@@ -226,7 +224,7 @@ export default function Home() {
                     <p>{story.summary}</p>
                     <div className="story-footer">
                       <span><Clock3 size={13} /> {story.time}</span>
-                      <span><Star size={13} fill="currentColor" /> {story.rating}</span>
+                      <span><Heart size={13} fill="currentColor" /> {story.rating}</span>
                       <button onClick={() => setSelectedStory(story)}>Read more <ArrowUpRight size={14} /></button>
                     </div>
                   </div>
